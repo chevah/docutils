@@ -45,15 +45,13 @@ class Writer(writers.Writer):
 
     default_stylesheet = 'html4css1.css'
 
-    default_stylesheet_path = utils.relative_path(
-        os.path.join(os.getcwd(), 'dummy'),
+    default_stylesheet_path = (
         os.path.join(os.path.dirname(__file__), default_stylesheet))
 
     default_template = 'template.txt'
 
-    default_template_path = utils.relative_path(
-        os.path.join(os.getcwd(), 'dummy'),
-        os.path.join(os.path.dirname(__file__), default_template))
+    default_template_path = (
+      os.path.join(os.path.dirname(__file__), default_template))
 
     settings_spec = (
         'HTML-Specific Options',

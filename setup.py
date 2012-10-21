@@ -22,6 +22,7 @@ except ImportError:
     print ('system using your package manager.')
     sys.exit(1)
 
+VERSION = '0.9.1-chevah2'
 
 if sys.version_info >= (3,):
     # copy-convert auxiliary python sources
@@ -113,7 +114,7 @@ into useful formats, such as HTML, XML, and LaTeX.  For
 input Docutils supports reStructuredText, an easy-to-read,
 what-you-see-is-what-you-get plaintext markup syntax.""", # wrap at col 60
     'url': 'http://docutils.sourceforge.net/',
-    'version': '0.9.1',
+    'version': VERSION,
     'author': 'David Goodger',
     'author_email': 'goodger@python.org',
     'license': 'public domain, Python, 2-Clause BSD, GPL 3 (see COPYING.txt)',
@@ -159,17 +160,18 @@ what-you-see-is-what-you-get plaintext markup syntax.""", # wrap at col 60
                      ['docutils/writers/odf_odt/styles.odt']),
                      ]
                    + s5_theme_files),
-    'scripts' : ['tools/rst2html.py',
-                 'tools/rst2s5.py',
-                 'tools/rst2latex.py',
-                 'tools/rst2xetex.py',
-                 'tools/rst2man.py',
-                 'tools/rst2xml.py',
-                 'tools/rst2pseudoxml.py',
-                 'tools/rstpep2html.py',
-                 'tools/rst2odt.py',
-                 'tools/rst2odt_prepstyles.py',
-                 ],}
+    # 'scripts' : ['tools/rst2html.py',
+    #              'tools/rst2s5.py',
+    #              'tools/rst2latex.py',
+    #              'tools/rst2xetex.py',
+    #              'tools/rst2man.py',
+    #              'tools/rst2xml.py',
+    #              'tools/rst2pseudoxml.py',
+    #              'tools/rstpep2html.py',
+    #              'tools/rst2odt.py',
+    #              'tools/rst2odt_prepstyles.py',
+    #              ],
+    }
 """Distutils setup parameters."""
 
 classifiers = [
