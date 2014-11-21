@@ -1416,8 +1416,7 @@ class HTMLTranslator(nodes.NodeVisitor):
                    'References must have "refuri" or "refid" attribute.'
             atts['href'] = '#' + node['refid']
             atts['class'] += ' internal'
-        if not isinstance(node.parent, nodes.TextElement):
-            assert len(node) == 1 and isinstance(node[0], nodes.image)
+        if len(node) == 1 and isinstance(node[0], nodes.image):
             atts['class'] += ' image-reference'
         self.body.append(self.starttag(node, 'a', '', **atts))
 
